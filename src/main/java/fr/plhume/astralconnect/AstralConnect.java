@@ -1,7 +1,7 @@
 package fr.plhume.astralconnect;
 
-import org.bukkit.ChatColor;
 import fr.plhume.astralconnect.config.PluginConfig;
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.plugin.Plugin;
 
 import java.io.IOException;
@@ -19,7 +19,6 @@ public final class AstralConnect extends Plugin {
     @Override
     public void onEnable() {
         instance = this;
-        saveDefaultConfig();
         try {
             PluginConfig.createConfig();
         } catch (IOException e) {
@@ -40,6 +39,6 @@ public final class AstralConnect extends Plugin {
     }
 
     public String getPrefix() {
-        return ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(getConfig().getString("prefix")));
+        return ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(PluginConfig.getConfig().getString("prefix")));
     }
 }
