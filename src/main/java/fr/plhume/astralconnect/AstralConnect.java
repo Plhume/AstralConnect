@@ -6,7 +6,8 @@ public final class AstralConnect extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // 1.0.0
+        saveDefaultConfig();
+        
         getLogger().info("============================");
         getLogger().info("= AstralConnect | Enabling =");
         getLogger().info("=   Loading version: " + getDescription().getVersion() + "   =");
