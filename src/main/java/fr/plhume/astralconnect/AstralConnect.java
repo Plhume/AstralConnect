@@ -1,6 +1,9 @@
 package fr.plhume.astralconnect;
 
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public final class AstralConnect extends JavaPlugin {
 
@@ -26,5 +29,9 @@ public final class AstralConnect extends JavaPlugin {
         getLogger().info("=============================");
         getLogger().info("= AstralConnect | Disabling =");
         getLogger().info("=============================");
+    }
+
+    public String getPrefix() {
+        return ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(getConfig().getString("prefix")));
     }
 }
