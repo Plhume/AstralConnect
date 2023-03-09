@@ -1,0 +1,4 @@
+name: AstralConnect
+version: '${project.version}'
+main: fr.plhume.astralconnect.AstralConnect
+api-version: 1.19
