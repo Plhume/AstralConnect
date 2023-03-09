@@ -1,1 +1,4 @@
 prefix: "&7[&3Astral&7] "
+
+modules:
+  chat: false
