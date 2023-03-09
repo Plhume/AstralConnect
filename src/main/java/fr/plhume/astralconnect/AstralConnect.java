@@ -1,9 +1,12 @@
 package fr.plhume.astralconnect;
 
 import org.bukkit.ChatColor;
+import fr.plhume.astralconnect.config.PluginConfig;
 import net.md_5.bungee.api.plugin.Plugin;
 
+import java.io.IOException;
 import java.util.Objects;
+import java.util.logging.Level;
 
 public final class AstralConnect extends Plugin {
 
@@ -17,6 +20,11 @@ public final class AstralConnect extends Plugin {
     public void onEnable() {
         instance = this;
         saveDefaultConfig();
+        try {
+            PluginConfig.createConfig();
+        } catch (IOException e) {
+            getLogger().log(Level.SEVERE, "Error while creating config file", e);
+        }
 
         getLogger().info("============================");
         getLogger().info("= AstralConnect | Enabling =");
