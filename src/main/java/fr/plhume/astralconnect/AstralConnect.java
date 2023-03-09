@@ -1,11 +1,11 @@
 package fr.plhume.astralconnect;
 
 import org.bukkit.ChatColor;
-import org.bukkit.plugin.java.JavaPlugin;
+import net.md_5.bungee.api.plugin.Plugin;
 
 import java.util.Objects;
 
-public final class AstralConnect extends JavaPlugin {
+public final class AstralConnect extends Plugin {
 
     private static AstralConnect instance;
 
